@@ -227,10 +227,10 @@ export const GXALogoHorizontal: React.FC<{
   const dividerColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(7, 33, 24, 0.15)';
 
   const heightClass =
-    size === 'sm' ? 'h-8 sm:h-9' : size === 'lg' ? 'h-12 sm:h-14' : 'h-10 sm:h-11';
+    size === 'sm' ? 'h-6 sm:h-8' : size === 'lg' ? 'h-10 sm:h-12' : 'h-6 xs:h-7 sm:h-9 md:h-10';
 
   return (
-    <div className={`inline-flex items-center gap-2.5 sm:gap-3.5 select-none ${className}`}>
+    <div className={`inline-flex items-center gap-1.5 sm:gap-2.5 select-none min-w-0 ${className}`}>
       {/* GXA Emblem */}
       <GXAEmblem
         className={`${heightClass} w-auto shrink-0`}
@@ -245,22 +245,22 @@ export const GXALogoHorizontal: React.FC<{
       />
 
       {/* Typographic Wordmark */}
-      <div className="flex flex-col justify-center text-left leading-none shrink-0">
-        <div className="font-display font-black tracking-tight flex items-baseline gap-1.5">
+      <div className="flex flex-col justify-center text-left leading-none min-w-0">
+        <div className="font-display font-black tracking-tight flex items-baseline gap-1 sm:gap-1.5 whitespace-nowrap">
           <span
-            className="text-lg sm:text-xl md:text-2xl font-black tracking-tight"
+            className="text-xs xs:text-sm sm:text-base md:text-xl lg:text-2xl font-black tracking-tight"
             style={{ color: forestTextColor }}
           >
             GXA
           </span>
           <span
-            className="text-lg sm:text-xl md:text-2xl font-black tracking-tight"
+            className="text-xs xs:text-sm sm:text-base md:text-xl lg:text-2xl font-black tracking-tight"
             style={{ color: forestTextColor }}
           >
             Career
           </span>
           <span
-            className="text-lg sm:text-xl md:text-2xl font-black tracking-tight"
+            className="text-xs xs:text-sm sm:text-base md:text-xl lg:text-2xl font-black tracking-tight"
             style={{ color: orangeTextColor }}
           >
             Academy
@@ -397,10 +397,10 @@ export const GXALogoWithTagline: React.FC<{
   const dividerColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(7, 33, 24, 0.15)';
 
   const emblemHeight =
-    size === 'sm' ? 'h-9 sm:h-10' : size === 'lg' ? 'h-14 sm:h-16' : 'h-11 sm:h-12';
+    size === 'sm' ? 'h-8 sm:h-9' : size === 'lg' ? 'h-10 sm:h-12 md:h-14' : 'h-8 sm:h-10 md:h-11';
 
   return (
-    <div className={`inline-flex items-center gap-3 sm:gap-4 select-none ${className}`}>
+    <div className={`inline-flex items-center gap-2.5 sm:gap-3.5 select-none min-w-0 max-w-full ${className}`}>
       {/* GXA Emblem */}
       <GXAEmblem
         className={`${emblemHeight} w-auto shrink-0`}
@@ -415,23 +415,23 @@ export const GXALogoWithTagline: React.FC<{
       />
 
       {/* Lockup Content */}
-      <div className="flex flex-col justify-center text-left shrink-0">
+      <div className="flex flex-col justify-center text-left min-w-0">
         {/* Brand Name */}
-        <div className="font-display font-black tracking-tight flex items-baseline gap-1.5 leading-none">
+        <div className="font-display font-black tracking-tight flex items-baseline gap-1 sm:gap-1.5 leading-none whitespace-nowrap">
           <span
-            className="text-lg sm:text-2xl font-black tracking-tight"
+            className="text-base sm:text-lg md:text-2xl font-black tracking-tight"
             style={{ color: forestTextColor }}
           >
             GXA
           </span>
           <span
-            className="text-lg sm:text-2xl font-black tracking-tight"
+            className="text-base sm:text-lg md:text-2xl font-black tracking-tight"
             style={{ color: forestTextColor }}
           >
             Career
           </span>
           <span
-            className="text-lg sm:text-2xl font-black tracking-tight"
+            className="text-base sm:text-lg md:text-2xl font-black tracking-tight"
             style={{ color: orangeTextColor }}
           >
             Academy
@@ -439,9 +439,9 @@ export const GXALogoWithTagline: React.FC<{
         </div>
 
         {/* Official Tagline */}
-        <div className="flex items-center gap-1.5 mt-1 sm:mt-1.5 leading-none">
+        <div className="flex items-center gap-1.5 mt-1 sm:mt-1.5 leading-none whitespace-nowrap">
           <span
-            className="text-[11px] sm:text-xs font-bold tracking-wide font-sans"
+            className="text-[10px] sm:text-xs font-bold tracking-wide font-sans"
             style={{ color: taglineColor }}
           >
             Learn Today. Lead Tomorrow.
@@ -450,7 +450,7 @@ export const GXALogoWithTagline: React.FC<{
 
         {/* Parent Company & Descriptor */}
         <div
-          className="text-[9px] sm:text-[10px] font-mono tracking-wider uppercase font-semibold mt-1 leading-none"
+          className="text-[8px] sm:text-[10px] font-mono tracking-wider uppercase font-semibold mt-0.5 sm:mt-1 leading-none whitespace-nowrap"
           style={{ color: descriptorColor }}
         >
           A GXA Technology Platform

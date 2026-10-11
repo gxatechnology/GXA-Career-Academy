@@ -16,26 +16,26 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full bg-[#F1F5F2] pt-12 pb-8 border-t border-[#E2E8E4] mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="w-full bg-[#F1F5F2] pt-12 pb-8 border-t border-[#E2E8E4] mt-auto max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0">
         {/* Welcome Grant Card */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl mb-12 shadow-xs border border-[#E2E8E4] flex flex-col lg:flex-row items-center justify-between gap-6">
-          <div className="max-w-xl">
+        <div className="bg-white p-5 sm:p-8 rounded-2xl mb-12 shadow-xs border border-[#E2E8E4] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 min-w-0">
+          <div className="max-w-xl min-w-0">
             <div className="flex items-center gap-2 text-[#EA580C] mb-1">
               <span className="material-symbols-outlined">redeem</span>
               <span className="text-xs uppercase tracking-wider font-bold">Exclusive Welcome Grant</span>
             </div>
-            <h4 className="font-display text-xl sm:text-2xl font-bold text-[#072118]">
-              Subscribe & Receive ₹100 Learning Credit
+            <h4 className="font-display text-xl sm:text-2xl font-bold text-[#072118] break-words">
+              Subscribe &amp; Receive ₹100 Learning Credit
             </h4>
-            <p className="text-sm text-[#4E5D54] mt-1 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#4E5D54] mt-1 leading-relaxed">
               Get curated syllabus drops, early bird textbook pre-orders, and an instant ₹100 voucher applied to your account.
             </p>
           </div>
-          <div className="w-full lg:w-auto flex-1 max-w-md">
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row items-stretch gap-2">
+          <div className="w-full lg:w-auto flex-1 max-w-md min-w-0">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row items-stretch gap-2 w-full min-w-0">
               <input
-                className="flex-1 px-4 py-2.5 bg-[#F9FAF7] rounded-xl text-sm text-[#121E17] focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#EA580C] border border-[#E2E8E4]"
+                className="min-w-0 flex-1 px-4 py-2.5 bg-[#F9FAF7] rounded-xl text-xs sm:text-sm text-[#121E17] focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#EA580C] border border-[#E2E8E4]"
                 placeholder="Enter your academic or work email"
                 type="email"
                 value={newsletterEmail}
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
                 required
               />
               <button
-                className="px-6 py-2.5 bg-[#EA580C] text-white font-semibold text-sm rounded-xl hover:bg-[#C2410C] transition-colors flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap shadow-sm"
+                className="px-5 py-2.5 bg-[#EA580C] text-white font-semibold text-xs sm:text-sm rounded-xl hover:bg-[#C2410C] transition-colors flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap shadow-sm shrink-0"
                 type="submit"
               >
                 <span>Claim ₹100</span>
@@ -57,16 +57,16 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* 8-Column Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 mb-12 min-w-0">
           {/* Brand Col */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-2">
+          <div className="col-span-2 md:col-span-4 lg:col-span-2 min-w-0">
             <button
               onClick={() => navigateTo('/')}
-              className="flex items-center mb-3 text-left cursor-pointer hover:opacity-90 transition-opacity"
+              className="flex items-center mb-3 text-left cursor-pointer hover:opacity-90 transition-opacity max-w-full min-w-0"
               title="GXA Career Academy Home"
               aria-label="GXA Career Academy Home"
             >
-              <GXALogoWithTagline size="md" />
+              <GXALogoWithTagline size="md" className="max-w-full" />
             </button>
             <p className="text-xs font-semibold text-[#059669] mb-1">
               Online Courses | eBooks | AI Learning | Professional Skills | Career Guidance | Certifications
@@ -141,27 +141,27 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Security & Indian Payment Assurance Strip */}
-        <div className="bg-white p-4 rounded-xl border border-[#E2E8E4] flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
-          <div className="flex items-center gap-3">
-            <span className="material-symbols-outlined text-[#059669] text-2xl">verified_user</span>
-            <div>
-              <span className="text-xs font-bold text-[#072118] block">100% Secure Checkout</span>
-              <span className="text-[11px] text-[#6B7C72]">Instant delivery for eBooks &amp; instant course activation across India</span>
+        <div className="bg-white p-4 rounded-xl border border-[#E2E8E4] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8 min-w-0">
+          <div className="flex items-center gap-3 min-w-0">
+            <span className="material-symbols-outlined text-[#059669] text-2xl shrink-0">verified_user</span>
+            <div className="min-w-0">
+              <span className="text-xs font-bold text-[#072118] block truncate">100% Secure Checkout</span>
+              <span className="text-[11px] text-[#6B7C72] block">Instant delivery for eBooks &amp; instant course activation across India</span>
             </div>
           </div>
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            <span className="text-[#6B7C72] uppercase font-bold text-[10px]">Accepted Payments:</span>
-            <span className="bg-[#E8EFEA] px-2.5 py-1 rounded text-[#072118] font-semibold flex items-center gap-1">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs min-w-0">
+            <span className="text-[#6B7C72] uppercase font-bold text-[10px] shrink-0">Accepted Payments:</span>
+            <span className="bg-[#E8EFEA] px-2 py-1 rounded text-[#072118] font-semibold flex items-center gap-1 text-[11px] shrink-0">
               <span className="material-symbols-outlined text-sm text-[#059669]">bolt</span>
-              UPI (GPay, PhonePe, Paytm, CRED)
+              UPI
             </span>
-            <span className="bg-[#E8EFEA] px-2.5 py-1 rounded text-[#072118] font-semibold flex items-center gap-1">
+            <span className="bg-[#E8EFEA] px-2 py-1 rounded text-[#072118] font-semibold flex items-center gap-1 text-[11px] shrink-0">
               <span className="material-symbols-outlined text-sm text-[#EA580C]">credit_card</span>
-              Razorpay Gateway (RuPay, Visa, MC)
+              Razorpay
             </span>
-            <span className="bg-[#E8EFEA] px-2.5 py-1 rounded text-[#072118] font-semibold flex items-center gap-1">
+            <span className="bg-[#E8EFEA] px-2 py-1 rounded text-[#072118] font-semibold flex items-center gap-1 text-[11px] shrink-0">
               <span className="material-symbols-outlined text-sm text-[#059669]">account_balance</span>
-              Net Banking (50+ Banks)
+              Net Banking
             </span>
           </div>
         </div>

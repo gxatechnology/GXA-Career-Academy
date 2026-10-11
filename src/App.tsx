@@ -297,14 +297,14 @@ const AppContent: React.FC = () => {
     (currentPath.startsWith('/ebooks/') && currentPath.endsWith('/preview'));
 
   return (
-    <div className="min-h-screen bg-[#F9FAF7] text-[#121E17] flex flex-col font-sans selection:bg-[#EA580C] selection:text-white">
+    <div className="min-h-screen bg-[#F9FAF7] text-[#121E17] flex flex-col font-sans selection:bg-[#EA580C] selection:text-white w-full max-w-full overflow-x-clip">
       {/* Public Header only shown for public storefront routes */}
       {!isImmersivePlayer && !isAdminRoute && <Header />}
 
       {/* Private Admin Navbar only shown for authenticated admin console sessions */}
       {isAdminRoute && isAdminAuthenticated && <AdminNavbar />}
 
-      <main className="flex-1 w-full max-w-full">
+      <main className="flex-1 w-full max-w-full min-w-0">
         {renderRoute()}
       </main>
 

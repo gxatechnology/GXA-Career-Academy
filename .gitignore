@@ -6,3 +6,8 @@ coverage/
 *.log
 .env*
 !.env.example
+audit_*.mjs
+screenshot_*.mjs
+package-lock.json
+
+

@@ -63,30 +63,30 @@ export const HomePage: React.FC = () => {
   return (
     <div className="flex flex-col w-full max-w-full overflow-x-clip bg-[#F9FAF7] text-[#121E17]">
       {/* 1. HERO SECTION: Editorial Masterhead & Flagship Monograph */}
-      <section className="relative pt-12 pb-20 border-b border-[#E2E8E4] bg-gradient-to-b from-[#F2F6F3] to-[#F9FAF7]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <section className="relative pt-8 sm:pt-12 pb-14 sm:pb-20 border-b border-[#E2E8E4] bg-gradient-to-b from-[#F2F6F3] to-[#F9FAF7] w-full max-w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
             {/* Left Column: Authoritative Editorial Statement */}
-            <div className="lg:col-span-7 flex flex-col gap-6">
-              <div className="flex items-center gap-2.5 text-xs font-semibold tracking-wider uppercase text-[#059669]">
+            <div className="lg:col-span-7 flex flex-col gap-5 sm:gap-6 min-w-0">
+              <div className="flex items-center gap-2.5 text-xs font-semibold tracking-wider uppercase text-[#059669] flex-wrap">
                 <span className="bg-[#ECFDF5] px-2.5 py-1 rounded-md border border-[#A7F3D0] text-[#047857]">GXA Technology Press</span>
                 <span className="text-slate-300">/</span>
                 <span className="text-[#4E5D54] font-medium">Applied Technical Education</span>
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-[#072118] tracking-tight leading-[1.12]">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-[#072118] tracking-tight leading-[1.14] break-words">
                 Engineering Rigor for the Modern Practitioner.
               </h1>
 
-              <p className="text-base sm:text-lg text-[#4E5D54] max-w-2xl leading-relaxed font-normal">
+              <p className="text-sm sm:text-base md:text-lg text-[#4E5D54] max-w-2xl leading-relaxed font-normal">
                 Authoritative monographs, production architecture blueprints, and applied learning cohorts authored by practicing technical architects and researchers across India.
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
                 <button
                   onClick={() => navigateTo('/ebooks')}
-                  className="px-7 py-3.5 bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-xl text-sm font-semibold transition-all flex items-center gap-2 cursor-pointer shadow-sm hover:shadow-orange-500/20 active:scale-[0.98]"
+                  className="px-6 sm:px-7 py-3 sm:py-3.5 bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm hover:shadow-orange-500/20 active:scale-[0.98]"
                 >
                   <span>Explore Technical Monographs</span>
                   <span className="material-symbols-outlined text-base">arrow_forward</span>
@@ -94,7 +94,7 @@ export const HomePage: React.FC = () => {
 
                 <button
                   onClick={() => navigateTo('/courses')}
-                  className="px-7 py-3.5 bg-white text-[#072118] border border-[#059669]/40 hover:border-[#059669] hover:bg-[#ECFDF5] rounded-xl text-sm font-semibold transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+                  className="px-6 sm:px-7 py-3 sm:py-3.5 bg-white text-[#072118] border border-[#059669]/40 hover:border-[#059669] hover:bg-[#ECFDF5] rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-2xs"
                 >
                   <span className="material-symbols-outlined text-base text-[#059669]">school</span>
                   <span>View Applied Cohorts</span>
@@ -103,58 +103,58 @@ export const HomePage: React.FC = () => {
 
               {/* Trust & Delivery Credentials */}
               <div className="pt-6 border-t border-[#E2E8E4] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#4E5D54]">
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
                   <div className="w-8 h-8 rounded-lg bg-[#ECFDF5] text-[#059669] flex items-center justify-center shrink-0">
                     <span className="material-symbols-outlined text-base">bolt</span>
                   </div>
-                  <div>
-                    <strong className="block text-[#072118] font-semibold">Instant Delivery</strong>
-                    <span>Direct PDF &amp; ePub via UPI</span>
+                  <div className="min-w-0">
+                    <strong className="block text-[#072118] font-semibold truncate">Instant Delivery</strong>
+                    <span className="text-[11px] text-[#4E5D54] block">Direct PDF &amp; ePub via UPI</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
                   <div className="w-8 h-8 rounded-lg bg-[#FFF7ED] text-[#EA580C] flex items-center justify-center shrink-0">
                     <span className="material-symbols-outlined text-base">terminal</span>
                   </div>
-                  <div>
-                    <strong className="block text-[#072118] font-semibold">100% Executable Code</strong>
-                    <span>Verified sandbox architectures</span>
+                  <div className="min-w-0">
+                    <strong className="block text-[#072118] font-semibold truncate">100% Executable Code</strong>
+                    <span className="text-[11px] text-[#4E5D54] block">Verified sandbox architectures</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
                   <div className="w-8 h-8 rounded-lg bg-[#ECFDF5] text-[#059669] flex items-center justify-center shrink-0">
                     <span className="material-symbols-outlined text-base">verified</span>
                   </div>
-                  <div>
-                    <strong className="block text-[#072118] font-semibold">Verifiable Credentials</strong>
-                    <span>Academic registry lookups</span>
+                  <div className="min-w-0">
+                    <strong className="block text-[#072118] font-semibold truncate">Verifiable Credentials</strong>
+                    <span className="text-[11px] text-[#4E5D54] block">Academic registry lookups</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Physical-Grade Book Presentation */}
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 min-w-0 w-full max-w-full">
               {flagshipBook && (
-                <div className="bg-white rounded-2xl border border-[#E2E8E4] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col gap-6 relative overflow-hidden group">
+                <div className="bg-white rounded-2xl border border-[#E2E8E4] p-5 sm:p-7 shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col gap-5 sm:gap-6 relative overflow-hidden group w-full max-w-full">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#EA580C]/10 to-transparent rounded-bl-full pointer-events-none" />
                   
-                  <div className="flex items-start justify-between gap-4 border-b border-[#F1F5F2] pb-4">
-                    <div>
+                  <div className="flex items-start justify-between gap-3 border-b border-[#F1F5F2] pb-4 min-w-0">
+                    <div className="min-w-0">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#EA580C] bg-[#FFF7ED] px-2.5 py-0.5 rounded-full border border-[#FFEDD5] inline-block mb-1">
                         Featured Publication
                       </span>
-                      <h3 className="font-display text-xl font-bold text-[#072118] mt-0.5">
+                      <h3 className="font-display text-lg sm:text-xl font-bold text-[#072118] mt-0.5 leading-snug">
                         {flagshipBook.title}
                       </h3>
-                      <span className="text-xs text-[#6B7C72] font-medium">
+                      <span className="text-xs text-[#6B7C72] font-medium block mt-0.5">
                         By {flagshipBook.authorName}
                       </span>
                     </div>
                     <div className="text-right shrink-0">
-                      <span className="font-display text-2xl font-bold text-[#072118]">
+                      <span className="font-display text-xl sm:text-2xl font-bold text-[#072118] block">
                         ₹{flagshipBook.price}
                       </span>
                       <span className="text-xs text-slate-400 line-through block">
@@ -164,7 +164,7 @@ export const HomePage: React.FC = () => {
                   </div>
 
                   {/* Book Mockup Frame */}
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[#072118] border border-[#E2E8E4] group shadow-inner">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[#072118] border border-[#E2E8E4] group shadow-inner w-full max-w-full">
                     <DigitalMarketingMasteryCover
                       title={flagshipBook.title}
                       authorName={flagshipBook.authorName}
@@ -172,14 +172,14 @@ export const HomePage: React.FC = () => {
                       edition={flagshipBook.edition}
                       className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                     />
-                    <div className="absolute bottom-3 left-3 bg-[#072118]/90 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-xs font-medium border border-emerald-900/50 flex items-center gap-1.5">
-                      <span className="material-symbols-outlined text-sm text-[#34D399]">menu_book</span>
-                      <span>{flagshipBook.pages} Pages • DRM-Free PDF + ePub</span>
+                    <div className="absolute bottom-2.5 sm:bottom-3 left-2.5 sm:left-3 bg-[#072118]/90 backdrop-blur-sm text-white px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-medium border border-emerald-900/50 flex items-center gap-1.5 max-w-[calc(100%-1.25rem)]">
+                      <span className="material-symbols-outlined text-sm text-[#34D399] shrink-0">menu_book</span>
+                      <span className="truncate">{flagshipBook.pages} Pages • DRM-Free</span>
                     </div>
                   </div>
 
                   {/* Highlights Summary */}
-                  <div className="text-xs text-[#4E5D54] space-y-2">
+                  <div className="text-xs text-[#4E5D54] space-y-2 min-w-0">
                     <p className="line-clamp-2 leading-relaxed">
                       {flagshipBook.description}
                     </p>
@@ -193,13 +193,13 @@ export const HomePage: React.FC = () => {
                   </div>
 
                   {/* CTA Actions */}
-                  <div className="grid grid-cols-2 gap-3 pt-2">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-1">
                     <button
                       onClick={() => navigateTo(`/ebooks/${flagshipBook.slug}/preview`)}
-                      className="py-2.5 px-4 bg-[#F1F5F2] hover:bg-[#E8EFEA] text-[#072118] rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 cursor-pointer border border-[#E2E8E4]"
+                      className="py-2.5 px-3 sm:px-4 bg-[#F1F5F2] hover:bg-[#E8EFEA] text-[#072118] rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 cursor-pointer border border-[#E2E8E4]"
                     >
                       <span className="material-symbols-outlined text-base text-[#059669]">menu_book</span>
-                      <span>Read Sample</span>
+                      <span className="truncate">Read Sample</span>
                     </button>
 
                     <button
@@ -215,10 +215,10 @@ export const HomePage: React.FC = () => {
                           slug: flagshipBook.slug,
                         })
                       }
-                      className="py-2.5 px-4 bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-sm active:scale-[0.98]"
+                      className="py-2.5 px-3 sm:px-4 bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-sm active:scale-[0.98]"
                     >
                       <span className="material-symbols-outlined text-base">shopping_bag</span>
-                      <span>Add to Cart</span>
+                      <span className="truncate">Add to Cart</span>
                     </button>
                   </div>
                 </div>
@@ -625,8 +625,8 @@ export const HomePage: React.FC = () => {
 
               <div className="space-y-3 text-xs leading-relaxed text-emerald-100/90">
                 <p className="text-emerald-300/70">// Example Prompt Engineering Blueprint from GXA Research Manual</p>
-                <div className="bg-black/40 p-4 rounded-xl border border-emerald-900/40 text-emerald-300">
-                  <code>
+                <div className="bg-black/40 p-4 rounded-xl border border-emerald-900/40 text-emerald-300 overflow-hidden">
+                  <code className="block break-all sm:break-words whitespace-normal leading-relaxed text-[11px] sm:text-xs">
                     SYSTEM_PROMPT: &quot;You are an enterprise systems architect. Analyze the provided microservice topology for single-point failures and return an RFC-compliant JSON object containing [failure_modes], [mitigation_matrix], and [telemetry_alarms]. Reject conversational commentary.&quot;
                   </code>
                 </div>
@@ -947,13 +947,13 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 12. INSTITUTIONAL CALL TO ACTION: Deep Forest Editorial Finish */}
-      <section className="py-20 bg-[#072118] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
-          <div className="flex justify-center">
-            <GXALogoWithTagline theme="dark" size="lg" />
+      <section className="py-14 sm:py-20 bg-[#072118] text-white w-full max-w-full">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6 min-w-0">
+          <div className="flex justify-center max-w-full min-w-0">
+            <GXALogoWithTagline theme="dark" size="md" className="max-w-full" />
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight break-words">
             Learn Today. Lead Tomorrow.
           </h2>
 
