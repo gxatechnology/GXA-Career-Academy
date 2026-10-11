@@ -12,7 +12,9 @@ generate_og_*.mjs
 render_social_*.mjs
 test_*.mjs
 verify_*.mjs
+check_live_*.mjs
 package-lock.json
+
 
 
 
