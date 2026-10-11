@@ -8,6 +8,11 @@ coverage/
 !.env.example
 audit_*.mjs
 screenshot_*.mjs
+generate_og_*.mjs
+render_social_*.mjs
+test_*.mjs
+verify_*.mjs
 package-lock.json
+
 
 
